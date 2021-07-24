@@ -2,3 +2,114 @@
 
 @import '~mdb-angular-ui-kit/assets/scss/mdb.scss';
 @import 'material-icons/iconfont/material-icons.css';
+//UTILS
+.title {
+    font-size: 1.5rem;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+}
+
+.text {
+    font-size: 1rem;
+}
+
+.material-icons {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
+.img-center {
+    margin: auto !important;
+    display: block !important;
+}
+
+.t-break {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.center {
+    text-align: center !important;
+    align-content: center;
+    display: block !important;
+    margin: auto !important;
+}
+
+.ws-normal {
+    white-space: normal;
+}
+
+//colors
+.bg-primary {
+    background-color: #000120 !important;
+}
+
+.bg-secondary {
+    background-color: #A72153 !important;
+}
+
+.bg-success {
+    background-color: #00690e !important;
+}
+
+.bg-danger {
+    background-color: #610000 !important;
+}
+
+.color-primary {
+    color: #000120 !important;
+}
+
+.color-secondary {
+    color: #A72153 !important;
+}
+
+.color-success {
+    color: #00690e !important;
+}
+
+.color-danger {
+    color: #610000 !important;
+}
+
+
+/* ////////////////////////////////////////////////////BREAKPOINTS//////////////////////////////////////////////////// */
+
+
+/* VISTA MOVIL VERTICAL*/
+
+@media screen and (min-width: 0px) and (max-width: 599px) {
+    .d-sm-none {
+        display: none !important;
+    }
+}
+
+
+/* FIN VISTA MOVIL VERTICAL*/
+
+
+/* VISTA MOVIL HORIZONTAL*/
+
+@media screen and (min-width: 600px) and (max-width: 760px) {}
+
+
+/* FIN VISTA MOVIL HORIZONTAL*/
+
+
+/* VISTA IPAD/TABLET VERTICAL*/
+
+@media screen and (min-width: 761px) and (max-width: 999px) {}
+
+
+/* FIN VISTA IPAD/TABLET VERTICAL*/
+
+
+/* VISTA IPAD/TABLETS HORIZONTAL */
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {}
+
+
+/* FIN VISTA IPAD/TABLETS HORIZONTAL */
