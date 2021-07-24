@@ -1,2 +1,2 @@
 # front-yaydoo-marketplace
-Repositorio de la prueba técnica de Yaydoo.
+Repositorio deL frontend para la prueba técnica de Yaydoo.
