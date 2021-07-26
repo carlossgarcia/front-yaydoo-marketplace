@@ -18,10 +18,18 @@ import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
 import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
 import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { Error404Component } from './components/error404/error404.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    SignupComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -40,7 +48,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MdbTabsModule,
     MdbTooltipModule,
     MdbValidationModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
+    FormsModule
+  ],
+  exports: [
+    Error404Component
   ],
   providers: [],
   bootstrap: [AppComponent]

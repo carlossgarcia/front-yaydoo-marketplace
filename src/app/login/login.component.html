@@ -1,0 +1,25 @@
+<section class="bg-primary">
+    <div class="container">
+        <form #form="ngForm" ngNativeValidate class="card card-container pb-4 animated fadeIn">
+            <div class="card-header text-center font-weight-bold py-3 subtitle">INICIAR SESIÓN</div>
+            <div class="card-body">
+
+                <label for="basic-url" class="form-label small-text">Correo</label>
+                <div class="input-group mb-3">
+                    <input [(ngModel)]="user.email" name="email" required type="text" class="form-control" />
+                </div>
+
+                <label for="basic-url" class="form-label small-text">Contraseña</label>
+                <div class="input-group mb-3">
+                    <input [(ngModel)]="user.password" name="password" required type="password" class="form-control" />
+                </div>
+            </div>
+            <button [disabled]="form.invalid" (click)="login()" type="button" class="btn btn-success center">
+                Iniciar Sesión
+            </button>
+            <p class="text-center m-0 pt-3">¿No tienes cuenta?</p>
+            <button type="button" [routerLink]="['/signup']" class="btn btn-link center">Registrarse</button>
+        </form>
+
+    </div>
+</section>

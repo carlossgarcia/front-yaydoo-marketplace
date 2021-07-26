@@ -1,0 +1,43 @@
+<section class="bg-primary">
+    <div class="container">
+        <form #form="ngForm" ngNativeValidate class="card card-container pb-4 animated fadeIn">
+            <div class="card-header text-center font-weight-bold py-3 subtitle">CREAR CUENTA</div>
+            <div class="card-body">
+
+                <label for="basic-url" class="form-label small-text">Correo</label>
+                <div class="input-group mb-3">
+                    <input required [(ngModel)]="user.email" name="email" type="text" class="form-control" />
+                </div>
+                <label for="basic-url" class="form-label small-text">Contraseña</label>
+                <div class="input-group mb-3">
+                    <input required [(ngModel)]="user.password" name="password" type="text" type="password" class="form-control" />
+                </div>
+
+                <label for="basic-url" class="form-label small-text">Confirmar contraseña</label>
+                <div class="input-group mb-3">
+                    <input required [(ngModel)]="confirmPass" name="confirmPass" type="password" class="form-control" />
+                </div>
+
+                <div class="form-check form-check-inline pt-3">
+                    <input (ngModelChange)="validateRole('buyer')" [(ngModel)]="isBuyer" name="isBuyer" value="true" type="text" mdbCheckbox class="form-check-input" type="checkbox" />
+                    <label class="form-check-label">Soy comprador</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input (ngModelChange)="validateRole('seller')" [(ngModel)]="isSeller" name="isSeller" value="seller" mdbCheckbox class="form-check-input" type="checkbox" />
+                    <label class="form-check-label">Soy vendedor</label>
+                </div>
+
+            </div>
+            <label *ngIf="user.password != confirmPass && user.password.length > 0 && confirmPass.length > 0" class="form-label small-text font-weight-bold color-danger text-center py-2">
+                Las contraseñas no coinciden
+            </label>
+            <label *ngIf="!isSeller && !isBuyer" class="form-label small-text font-weight-bold color-danger text-center py-2">
+                Debe seleccionar al menos 1 opción de usuario
+            </label>
+            <button (click)="signUp()" [disabled]="form.invalid || user.password != confirmPass || !isSeller && !isBuyer" type="button" class="btn btn-success center">Registrarse</button>
+            <p class="text-center m-0 pt-3">¿Ya tienes cuenta?</p>
+            <button [routerLink]="['/login']" type="button" class="btn btn-link center">Iniciar Sesión</button>
+        </form>
+    </div>
+</section>
